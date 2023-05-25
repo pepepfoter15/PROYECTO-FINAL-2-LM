@@ -22,6 +22,14 @@ La URL del repositorio git
 La URL de la página desplegada en una plataforma como servicio
 
 En este proyecto es la versión aplicación del programa de Clash of Clans. Tratará de lo siguiente:
-- Tendrá 2 peticiones distintas entre sí, una hará una petición
+
+- Tendrá 4 páginas más el base.html.
+- En la página inicio tendrá 2 imágenes que rediccionarán cada una de ellas a las 2 peticiones por separado.
+- Tendrá 2 peticiones distintas entre sí.
+- Una hará una petición a un buscador que filtra por código de jugador y nos muestra el nombre, el nivel de experencia y un enlace a los detalles de este con información refente al jugador.
+- La otra hará una petición a un buscador de clanes por el nombre y mostrará una lista de 20 clanes como máximo (ordenados por el nivel de copas) y nos mostrará el nombre, las copas totales en ambas aldeas de todos los integrantes del clan y un enlace a los detalles de este con información refente al clan.
+
+Con esto dicho, aquí tiene mis repositorios para probarlos. Recuerde ingresar el token que se encuentra en esta página: https://developer.clashofclans.com/#/. 
+Debes registrarte o iniciar sesión para poder acceder a la creación de claves :). 
 
 ![Imagen del proyecto](/static/images/readme.png)
