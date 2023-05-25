@@ -23,3 +23,5 @@ La URL de la página desplegada en una plataforma como servicio
 
 En este proyecto es la versión aplicación del programa de Clash of Clans. Tratará de lo siguiente:
 - Tendrá 2 peticiones distintas entre sí, una hará una petición
+
+![Imagen del proyecto](/static/images/readme.png)
