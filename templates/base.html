@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type=text/css href="../static/css/w3.css" />
+  <link rel="stylesheet" ref="https://fonts.googleapis.com/css?family=Poppins" />
+  <link rel="icon" type="image/jpg" href="/static/images/favicon.png"/>
+  <style>
+  body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+  body {font-size:16px;}
+  .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+  .w3-half img:hover{opacity:1}
+  </style>
+</head>
+<body>
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Proyecto Final LM</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="/" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
+    <a href="/jugadores" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Jugadores</a>
+    <a href="/clanes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Clanes</a>
+  </div>
+</nav>
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <span>Î Dale al botón <- si desea volver a la página anterior</span>
+</header>
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h2><b>Pepe Rodríguez Cañas</b></h2>
+    <h1><b>LM - Clash of Clans</b></h1>
+    <hr style="width:325px;border:5px solid #000" class="w3-round">
+  </div>
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <section>{% block contenido %}{% endblock %}</section>
+  </div>
+</div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Repositirios en <a href="https://github.com/pepepfoter15/PROYECTO-FINAL-2-LM" title="W3.CSS" target="_blank" class="w3-hover-opacity">Github</a></p></div>
+</body>
+</html>

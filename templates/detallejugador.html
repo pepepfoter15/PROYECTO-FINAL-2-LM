@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Detalles del jugador - COC{% endblock %}
+{% block contenido %}
+    <style>
+        body {
+            background-image: url("/static/images/foto_detalles_jugador.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <h2>Info del jugador: {{ jugador.nombre }}</h2>
+    <ul>
+        <li><strong>Codigo del jugador:</strong> {{ jugador.codigo_jugador }}</li>
+        <li><strong>Nivel de ayuntamiento en aldea normal:</strong> {{ jugador.nvl_ayun_nor }}</li>
+        <li><strong>Copas en la aldea normal:</strong> {{ jugador.copas_nor }}</li>
+        <li><strong>Record de copas en la aldea normal:</strong> {{ jugador.record_copas_nor }}</li>
+        <li><strong>Nivel de ayuntamiento en aldea nocturna:</strong> {{ jugador.nvl_ayun_noc }}</li>
+        <li><strong>Copas en la aldea nocturna:</strong> {{ jugador.copas_noc }}</li>
+        <li><strong>Record de copas en la aldea nocturna:</strong> {{ jugador.record_copas_noc }}</li>
+        <li><strong>Donaciones este mes:</strong> {{ jugador.donaciones }}</li>
+        <li><strong>Puntos de la Capital del clan contribuidos:</strong> {{ jugador.puntos_capital }}</li>
+    </ul>
+    <h2>Info del clan de {{ jugador.nombre }}: {{ jugador.nombre_clan }}</h2>
+    <ul>
+        <li><strong>Codigo del clan:</strong> {{ jugador.codigo_clan }}</li>
+        <li><strong>Nivel del clan:</strong> {{ jugador.nivel_clan }}</li>
+        <li><strong>Rol en el clan del jugador:</strong> {{ jugador.rol_clan }}</li>
+    </ul>
+    <a href="/jugadores">Haz click aquí para regresar a la página /jugadores</a>
+{% endblock %}

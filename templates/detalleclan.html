@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Detalles del Clan - Clash of Clans{% endblock %}
+{% block contenido %}
+    <style>
+        body {
+            background-image: url("/static/images/foto_detalles_jugador.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <h2>Detalles del Clan - COC</h2>
+    {% if jugador -%}
+        <ul>
+            <li><strong>Nombre del clan:</strong> {{ jugador.nombre_clan }}</li>
+            <li><strong>Código del clan:</strong> {{ jugador.codigo_clan }}</li>
+            <li><strong>Nivel del clan:</strong> {{ jugador.nivel_clan }}</li>
+            <li><strong>Estado del clan:</strong> {{ jugador.estado_clan }}</li>
+            <li><strong>Copas (Aldea normal):</strong> {{ jugador.copas_nor }}</li>
+            <li><strong>Copas (Aldea nocturna):</strong> {{ jugador.copas_noc }}</li>
+            <li><strong>País:</strong> {{ jugador.pais_clan }}</li>
+            <li><strong>Código del país:</strong> {{ jugador.codigo_pais }}</li>
+            <li><strong>Liga de clanes:</strong> {{ jugador.liga_clanes }}</li>
+            <li><strong>Copas mínimas (Aldea normal):</strong> {{ jugador.copas_minimas_nor }}</li>
+            <li><strong>Copas mínimas (Aldea nocturna):</strong> {{ jugador.copas_minimas_noc }}</li>
+            <li><strong>Número de miembros:</strong> {{ jugador.num_miembros }}</li>
+        </ul>
+    {% else -%}
+        <p>No se encontraron detalles del clan.</p>
+    {% endif -%}
+    <h2></h2>
+    <a href="/clanes">Haz click aquí para regresar a la página /clanes</a>
+{% endblock %}

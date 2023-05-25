@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Clanes - Clash of Clans{% endblock %}
+{% block contenido %}
+    <h1>Clanes</h1>
+    <h3>Buscador de clanes</h3>
+    <h4>Introduce el nombre del clan que quieres buscar:</h4>
+    <hr style="width:430px;border:5px solid #FF3633" class="w3-round">
+    <form method="post" action="/clanes">
+        <input type="text" name="clan" placeholder="Nombre del clan"/>
+        <input type="submit" value="Buscar clan" />
+    </form>  
+    {% if clanes %}
+        <h1>Resultados de la búsqueda</h1>
+        <table>
+            <tr>
+                <th>Nombre del clan</th>
+                <th>Copas del clan (Aldea normal)</th>
+                <th>Copas del clan (Aldea nocturna)</th>
+                <th>Detalles del clan</th>
+            </tr>
+            {% for clan in clanes %}
+            <tr>
+                <td>{{ clan.nombre_clan }}</td>
+                <td>{{ clan.copas_clan_nor }}</td>
+                <td>{{ clan.copas_clan_noc }}</td>
+                <td><a href="/clanes/{{ codigo_c }}">Pincha aquí</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+{% endblock %}

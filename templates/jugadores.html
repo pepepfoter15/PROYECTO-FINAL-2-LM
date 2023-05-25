@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Jugadores - Clash of Clans{% endblock %}
+{% block contenido %}
+    <h1>Jugadores</h1>
+    <h3>Buscador de jugadores</h3>
+    <h4>Introduce el código del jugador sin #:</h4>
+    <hr style="width:330px;border:5px solid #FF3633" class="w3-round">
+    <form method="post" action="/jugadores">
+        <input type="text" name="nombre" placeholder="Código del jugador"/>
+        <input type="submit" value="Buscar jugador" />
+    </form>  
+    {% if jugador %}
+        <br>
+        <h1>Detalles del jugador</h1>
+        <table>
+            <tr>
+                <th>Nombre del jugador</th>
+                <th>Nivel de experiencia</th>
+                <th>Detalles</th>
+            </tr>
+            <tr>
+                <td>{{ jugador.nombre }}</td>
+                <td>{{ jugador.nivel_experiencia }}</td>
+                <td><a href="/jugadores/{{ codigo }}">Pincha aquí</a></td>
+            </tr>
+        </table>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+{% endblock %}s
