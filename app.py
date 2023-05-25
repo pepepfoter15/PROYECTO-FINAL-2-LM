@@ -13,7 +13,7 @@ def jugadores():
         codigo_jugador = request.form.get('nombre')
         
         url = f'https://api.clashofclans.com/v1/players/%23{codigo_jugador}'
-        token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBjZTBhOWY1LTJjZGUtNDMyYi1hMDc5LTVkNTYzMzA3NGNmMCIsImlhdCI6MTY4NTAyOTMxNSwic3ViIjoiZGV2ZWxvcGVyLzg2ODg2OGE0LTc3YTktNzNkZS1mMmY5LWU1ZTljZWQ4NGI5NiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjg1LjUyLjE2My43MiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.5QteUzBubLK7StwIKCct9fHvAP6aGdpkvgKZv5W2ulj2_pCycDCr3rkmHBlM9dyxktgjLbCNjzWoQm36Qkg3bw'
+        token = 'Bearer ["INTRODUCE TU TOKEN"]
 
         headers = {'Authorization': token}
 
@@ -38,8 +38,8 @@ def jugadores():
 @app.route('/jugadores/<codigo>')
 def jugadores_detalles(codigo):
     url = f'https://api.clashofclans.com/v1/players/%23{codigo}'
-    token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBjZTBhOWY1LTJjZGUtNDMyYi1hMDc5LTVkNTYzMzA3NGNmMCIsImlhdCI6MTY4NTAyOTMxNSwic3ViIjoiZGV2ZWxvcGVyLzg2ODg2OGE0LTc3YTktNzNkZS1mMmY5LWU1ZTljZWQ4NGI5NiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjg1LjUyLjE2My43MiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.5QteUzBubLK7StwIKCct9fHvAP6aGdpkvgKZv5W2ulj2_pCycDCr3rkmHBlM9dyxktgjLbCNjzWoQm36Qkg3bw'
-
+    token = 'Bearer ["INTRODUCE TU TOKEN"]
+	
     headers = {'Authorization': token}
 
     response = requests.get(url, headers=headers)
@@ -89,7 +89,7 @@ def clanes():
         nombre_clan_busqueda = request.form.get('clan')
 
         url = f'https://api.clashofclans.com/v1/clans?name={nombre_clan_busqueda}&limit=20'
-        token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBjZTBhOWY1LTJjZGUtNDMyYi1hMDc5LTVkNTYzMzA3NGNmMCIsImlhdCI6MTY4NTAyOTMxNSwic3ViIjoiZGV2ZWxvcGVyLzg2ODg2OGE0LTc3YTktNzNkZS1mMmY5LWU1ZTljZWQ4NGI5NiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjg1LjUyLjE2My43MiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.5QteUzBubLK7StwIKCct9fHvAP6aGdpkvgKZv5W2ulj2_pCycDCr3rkmHBlM9dyxktgjLbCNjzWoQm36Qkg3bw'
+	token = 'Bearer ["INTRODUCE TU TOKEN"]       
 
         headers = {'Authorization': token}
 
@@ -122,8 +122,8 @@ def clanes():
 @app.route('/clanes/<codigo_c>')
 def clanes_detalles(codigo_c):
     url = f'https://api.clashofclans.com/v1/clans?name={codigo_c}&limit=20'
-    token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBjZTBhOWY1LTJjZGUtNDMyYi1hMDc5LTVkNTYzMzA3NGNmMCIsImlhdCI6MTY4NTAyOTMxNSwic3ViIjoiZGV2ZWxvcGVyLzg2ODg2OGE0LTc3YTktNzNkZS1mMmY5LWU1ZTljZWQ4NGI5NiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjg1LjUyLjE2My43MiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.5QteUzBubLK7StwIKCct9fHvAP6aGdpkvgKZv5W2ulj2_pCycDCr3rkmHBlM9dyxktgjLbCNjzWoQm36Qkg3bw'
-
+    token = 'Bearer ["INTRODUCE TU TOKEN"]
+	
     headers = {'Authorization': token}
     response = requests.get(url, headers=headers)
 
