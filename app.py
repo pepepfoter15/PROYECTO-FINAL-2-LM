@@ -13,7 +13,7 @@ def jugadores():
         codigo_jugador = request.form.get('nombre')
         
         url = f'https://api.clashofclans.com/v1/players/%23{codigo_jugador}'
-        token = 'Bearer ["INTRODUCE TU TOKEN"]
+        token = 'Bearer ["INTRODUCE TU TOKEN"]'
 
         headers = {'Authorization': token}
 
@@ -38,7 +38,7 @@ def jugadores():
 @app.route('/jugadores/<codigo>')
 def jugadores_detalles(codigo):
     url = f'https://api.clashofclans.com/v1/players/%23{codigo}'
-    token = 'Bearer ["INTRODUCE TU TOKEN"]
+    token = 'Bearer ["INTRODUCE TU TOKEN"]'
 	
     headers = {'Authorization': token}
 
@@ -89,7 +89,7 @@ def clanes():
         nombre_clan_busqueda = request.form.get('clan')
 
         url = f'https://api.clashofclans.com/v1/clans?name={nombre_clan_busqueda}&limit=20'
-	token = 'Bearer ["INTRODUCE TU TOKEN"]       
+        token = 'Bearer ["INTRODUCE TU TOKEN"]'      
 
         headers = {'Authorization': token}
 
@@ -122,7 +122,7 @@ def clanes():
 @app.route('/clanes/<codigo_c>')
 def clanes_detalles(codigo_c):
     url = f'https://api.clashofclans.com/v1/clans?name={codigo_c}&limit=20'
-    token = 'Bearer ["INTRODUCE TU TOKEN"]
+    token = 'Bearer ["INTRODUCE TU TOKEN"]'
 	
     headers = {'Authorization': token}
     response = requests.get(url, headers=headers)
